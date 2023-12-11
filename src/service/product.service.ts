@@ -2,6 +2,7 @@ import { FilterQuery, QueryOptions, UpdateQuery } from "mongoose";
 import ProductModel, { ProductDocument, ProductInput } from "../models/product.model";
 
 export async function createProduct (input: ProductInput) {
+    console.log("Executing create")
     return ProductModel.create(input)
 }
 

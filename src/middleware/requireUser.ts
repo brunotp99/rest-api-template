@@ -8,8 +8,6 @@ export const requireUser = (
     
     const user = res.locals.user;
     
-    console.log(user)
-    
     if (!user) {
         return res.sendStatus(403);
     }

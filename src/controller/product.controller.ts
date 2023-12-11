@@ -26,7 +26,7 @@ export async function updateProductHandler (
     const product = await findProduct({productId});
     
     if (!product) {
-        return res.sendStatus(404);
+        return res.sendStatus(400);
     }
     
     if (String(product.user) !== userId) {

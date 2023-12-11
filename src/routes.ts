@@ -20,6 +20,7 @@ function routes (app: Express) {
     app.get("/api/sessions", requireUser, getUserSessionsHandler);
     
     app.delete("/api/sessions", requireUser, deleteSessionHandler);
+
     
     app.post("/api/products", [requireUser, validateResources(createProductSchema)], createProductHandler)
     app.put("/api/products/:productId", [requireUser, validateResources(updateProductSchema)], updateProductHandler)

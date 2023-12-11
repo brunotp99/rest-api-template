@@ -31,7 +31,7 @@ export async function validatePassword ({email, password}: {email: string, passw
         return false;
     }
     
-    return omit(user.toJSON(), ["password"]);
+    return omit(user, ["password"]);
 }
 
 export async function findUser (query: FilterQuery<UserDocument>) {
